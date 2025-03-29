@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div class="display-container">
+                <input type="text" id="display" disabled>
+            </div>
+
+            <!-- Tombol Operasi Utama -->
+            <div class="buttons operations">
+                <button class="red" onclick="clearDisplay()">C</button>
+                <button class="op" onclick="appendOperator('÷')">÷</button>
+                <button class="op" onclick="appendOperator('×')">×</button>
+                <button class="op" onclick="appendOperator('-')">-</button>
+                <button class="op" onclick="appendOperator('+')">+</button>
+                <button class="equal" onclick="calculateResult()">=</button>
+                <button class="red" onclick="deleteLast()">⌫</button>
+                <button class="histori" onclick="toggleHistory()">🕒</button>
+            </div>
+            
+            <!-- Container untuk menampilkan histori -->
+            <div id="history-container" class="history-container">
+                <h3>History</h3>
+                <ul id="history-list"></ul>
+            </div>
+
+            <!-- Barisan Angka -->
+            <div class="buttons numbers">
+                <button class="num" onclick="appendNumber(1)">1</button>
+                <button class="num" onclick="appendNumber(2)">2</button>
+                <button class="num" onclick="appendNumber(3)">3</button>
+                <button class="num" onclick="appendNumber(4)">4</button>
+                <button class="num" onclick="appendNumber(5)">5</button>
+                <button class="num" onclick="appendNumber(6)">6</button>
+                <button class="num" onclick="appendNumber(7)">7</button>
+                <button class="num" onclick="appendNumber(8)">8</button>
+                <button class="num" onclick="appendNumber(9)">9</button>
+                <button class="num" onclick="appendNumber(0)">0</button>
+            </div>
+
+            <!-- Tombol Fungsi -->
+            <div class="buttons functions">
+                <button class="gray" onclick="applyFunction('sin')">sin</button>
+                <button class="gray" onclick="applyFunction('cos')">cos</button>
+                <button class="gray" onclick="applyFunction('tan')">tan</button>
+                <button class="gray" onclick="applyFunction('sqrt')">√</button>
+                <button class="gray" onclick="applyFunction('ln')">ln</button>
+                <button class="gray" onclick="applyFunction('log')">log</button>
+                <button class="gray" onclick="applyFunction('inv')">1/x</button>
+                <button class="gray" onclick="applyFunction('parens')">( )</button>
+                <button class="gray" onclick="applyFunction('exp')">e^x</button>
+                <button class="gray" onclick="applyFunction('square')">x²</button>
+                <button class="gray" onclick="applyFunction('power')">xʸ</button>
+                <button class="gray" onclick="applyFunction('percent')">%</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

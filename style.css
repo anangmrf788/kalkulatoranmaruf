@@ -1,0 +1,192 @@
+/* Styling untuk body agar lebih rapi */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180vh;
+    margin: 0;
+}
+
+/* Container untuk kalkulator */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Styling utama kalkulator */
+.calculator {
+    width: 350px;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Display input */
+.display-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#display {
+    width: 100%;
+    height: 60px;
+    font-size: 2em;
+    text-align: right;
+    border: none;
+    outline: none;
+    background: #333;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Styling untuk tombol */
+.buttons {
+    display: grid;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.operations {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.functions {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.numbers {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Style dasar tombol */
+button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Warna tombol */
+.num {
+    background-color: #444;
+    color: white;
+}
+
+.op {
+    background-color: #ff9500;
+    color: white;
+}
+
+.gray {
+    background-color: #666;
+    color: white;
+}
+
+.red {
+    background-color: #d32f2f;
+    color: white;
+}
+
+.equal {
+    background-color: #0a84ff;
+    color: white;
+}
+
+/* Hover efek */
+button:hover {
+    opacity: 0.8;
+}
+
+/* Styling untuk history container */
+.history-container {
+    display: none;
+    background: #333333;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    max-height: 150px;
+    overflow-y: auto;
+}
+.histori {
+    background-color: #3d7a08;
+    color: white;
+}
+/* Styling untuk daftar history */
+#history-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#history-list li {
+    padding: 5px;
+    border-bottom: 1px solid #16710e;
+}
+
+
+/* Responsive untuk layar kecil */
+@media (max-width: 768px) {
+    body {
+        height: 100vh;
+        align-items: flex-start;
+        padding-top: 20px;
+    }
+
+    .calculator {
+        width: 95%;
+        padding: 15px;
+    }
+
+    #display {
+        font-size: 1.8em;
+        height: 50px;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 1em;
+    }
+
+    .buttons {
+        gap: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .history-container {
+        width: 100%;
+        max-height: 120px; /* Kurangi tinggi history */
+        font-size: 0.9em; /* Perkecil ukuran font */
+        padding: 8px;
+    }
+
+    #history-list li {
+        padding: 4px;
+        font-size: 0.85em; /* Perkecil ukuran teks */
+    }
+}
+
+@media (max-width: 480px) {
+    .history-container {
+        max-height: 100px; /* Kurangi lagi untuk layar lebih kecil */
+        font-size: 0.8em;
+        padding: 6px;
+    }
+
+    #history-list li {
+        padding: 3px;
+        font-size: 0.75em;
+    }
+}
